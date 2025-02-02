@@ -1,4 +1,156 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.header {
+  position: relative;
+  display: grid;
+  padding: 20vw 2.667vw 17.6vw;
+  background: var(--bg-heder) center/cover;
+}
+
+.header::after, .header::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.header::after {
+  bottom: var(--offset);
+  left: var(--offset);
+  border-inline-start: 1px solid var(--color-pink);
+  border-block-end: 1px solid var(--color-pink);
+}
+
+.header::before {
+  top: var(--offset);
+  right: var(--offset);
+  border-inline-end: 1px solid var(--color-pink);
+  border-block-start: 1px solid var(--color-pink);
+}
+
+.header__rec {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: clamp(14px, 3.804vw, 24px);
+  right: clamp(19px, 5.163vw, 29px);
+  font-size: 15px;
+}
+
+.header__rec::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-pink);
+  box-shadow: 0px 0px 4px 2px var(--color-pink);
+  border-radius: 50%;
+  margin-inline-start: 10px;
+}
+
+.header__theme-menu {
+  margin-block-end: 19.6vw;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  cursor: pointer;
+  width: 70px;
+  height: 26px;
+  font-family: var(--font);
+  font-weight: var(--font-regular);
+  font-size: var(--font-xs);
+  color: var(--color-pink);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, .4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-block-end: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--color-pink);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--color-pink);
+}
+
+.header__title {
+  max-width: 355px;
+  font-weight: var(--font-bold);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: var(--color-purple);
+  text-shadow: 4px 4px 0px var(--color-pink);
+  margin-block-end: 13.6vw;
+}
+
+.header__text {
+  justify-self: end;
+  max-width: clamp(355px, 94.667vw, 364px);
+}
+
+.text-decor {
+  font-weight: var(--font-bold);
+  line-height: 23.4px;
+  color: var(--color-dark-text);
+  background-color: var(--color-pink);
+}
+
+@media (width >= 750px) {
+  .header {
+    padding: 25vw 20px 23.828vw 0;
+  }
+
+  .header__theme-menu {
+    margin-block-end: 23.4vw;
+  }
+
+  .header__title {
+    max-width: 100%;
+    word-spacing: 6.771vw;
+    margin-block-end: 20.6vw;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1000px) {
+  .header {
+    padding-block-start: 1.953vw;
+    padding-block-end: 13.184vw;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+    padding-inline-start: 1.953vw;
+  }
+
+  .header__theme-menu {
+    margin-block-end: 28.9vw;
+  }
+
+  .header__title {
+    margin-block-end: 12.2vw;
+  }
+
+  .header__text {
+    max-width: 491px;
+  }
+}
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
