@@ -1,12 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* header */
 .header {
   position: relative;
   display: grid;
   padding: 20vw 2.667vw 17.6vw;
-  background: var(--bg-heder) center/cover;
+  background: var(--bg-image) center/cover;
 }
 
-.header::after, .header::before {
+.header::after,
+.header::before {
   content: '';
   position: absolute;
   display: inline-block;
@@ -35,6 +37,7 @@
   top: clamp(14px, 3.804vw, 24px);
   right: clamp(19px, 5.163vw, 29px);
   font-size: 15px;
+  color: var(--color-pink);
 }
 
 .header__rec::after {
@@ -49,7 +52,7 @@
 }
 
 .header__theme-menu {
-  margin-block-end: 19.6vw;
+  margin-block-end: clamp(70px, 18.667vw, 88px);
 }
 
 .header__theme-menu-list {
@@ -110,7 +113,9 @@
   background-color: var(--color-pink);
 }
 
-@media (width >= 750px) {
+/* header media */
+
+@media (width >=750px) {
   .header {
     padding: 25vw 20px 23.828vw 0;
   }
@@ -127,7 +132,7 @@
   }
 }
 
-@media (width >= 1000px) {
+@media (width >=1000px) {
   .header {
     padding-block-start: 1.953vw;
     padding-block-end: 13.184vw;
@@ -140,11 +145,11 @@
   }
 
   .header__theme-menu {
-    margin-block-end: 28.9vw;
+    margin-block-end: 295px;
   }
 
   .header__title {
-    margin-block-end: 12.2vw;
+    margin-block-end: 125px;
   }
 
   .header__text {
@@ -152,6 +157,93 @@
   }
 }
 
-.page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+/* main */
+
+.main {
+  display: grid;
+  gap: 30px;
+  padding-block-start: clamp(42px, 10.667vw, 60px);;
+  padding-inline-start: clamp(10px, 2.667vw, 20px);
+  padding-inline-end: clamp(10px, 2.667vw, 20px);
+}
+
+.main-title {
+  font-weight: var(--font-bold);
+  font-size: var(--font-xs);
+  line-height: 23px;
+  word-spacing: 8px;
+  color: var(--color-pink);
+  margin-block-end: 19px;
+}
+
+.main-subtitle {
+  margin-block-end: 10px;
+  font-size: var(--font-xs);
+  font-weight: var(--font-bold);
+}
+
+.main-text {
+  line-height: 1.5rem;
+  color: var(--color-light-pink);
+  margin-block-end: 20px;
+  letter-spacing: .02rem;
+  word-spacing: .4rem;
+}
+
+.main-link {
+  position: relative;
+  text-shadow: 2px 2px 0px var(--color-pink);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: border-color .3s;
+}
+
+.main-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.main-link:hover::after {
+  opacity: 1;
+}
+
+.main-link:focus {
+  outline: none;
+}
+
+.main-link:focus-visible {
+  border-color: currentColor;
+}
+
+.focus-tips__subtitle {
+  margin-block-end: 20px;
+}
+
+.main-intro {
+  font-size: var(--font-xs);
+  font-weight: var(--font-regular);
+  line-height: 23.4px;
+  margin-block-end: 10px;
+}
+
+.focus-images {
+  display: grid;
+  gap: 10px;
+}
+
+.focus-tips__subtitle {
+  margin: 0;
+}
+
+.main-image {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }

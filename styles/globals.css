@@ -13,7 +13,10 @@ body {
   font-family: var(--font);
   font-weight: var(--font-regular);
   font-size: var(--font-xs);
-  color: var(--color-pink);
+}
+
+.page {
+  background-attachment: fixed;
 }
 
 h1,

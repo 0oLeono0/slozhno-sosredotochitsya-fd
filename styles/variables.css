@@ -6,13 +6,14 @@
   --font: "IBM Plex Mono", sans-serif;
   --font-regular: 400;
   --font-bold: 700;
-  --font-xs: 1.125rem;
+  --font-xs: 18px;
   
   --color-pink: rgb(255, 0, 112);
   --color-purple: rgb(219, 0, 255);
   --color-dark-text: rgb(0, 0, 40);
+  --color-light-pink: rgb(241, 178, 206);
 
   --offset: clamp(10px, 2.717vw, 20px);
 
-  --bg-header: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
 }
