@@ -10,8 +10,8 @@
 /* header */
 .header {
   position: relative;
-  display: grid;
   padding: 19.2vw 2.667vw 17.6vw;
+  height: 100vh;
 }
 
 .header::after,
@@ -387,15 +387,9 @@
   justify-content: center;
   position: relative;
   padding: clamp(10px, 2.667vw, 20px);
-  height: clamp(668px, 178.133vw, 1024px);
+  height: 100vh;
 }
 
 .footer-title {
   text-shadow: 2px 2px 0px var(--color-accent);
-}
-
-@media (width >=1000px) {
-  .footer {
-    height: 768px;
-  }
 }
