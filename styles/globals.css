@@ -15,10 +15,6 @@ body {
   font-size: var(--font-xs);
 }
 
-.page {
-  background-attachment: fixed;
-}
-
 h1,
 h2,
 h3,

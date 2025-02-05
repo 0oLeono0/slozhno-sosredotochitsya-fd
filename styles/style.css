@@ -1,10 +1,17 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.page {
+  background-color: var(--color-bg);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 /* header */
 .header {
   position: relative;
   display: grid;
   padding: 20vw 2.667vw 17.6vw;
-  background: var(--bg-image) center/cover;
 }
 
 .header::after,
@@ -16,22 +23,23 @@
   display: inline-block;
   width: 25px;
   height: 25px;
+  border: 1px solid var(--color-accent);
 }
 
 .header::after,
 .footer::after {
   bottom: var(--offset);
   left: var(--offset);
-  border-inline-start: 1px solid var(--color-pink);
-  border-block-end: 1px solid var(--color-pink);
+  border-inline-end: none;
+  border-block-start: none;
 }
 
 .header::before,
 .footer::before {
   top: var(--offset);
   right: var(--offset);
-  border-inline-end: 1px solid var(--color-pink);
-  border-block-start: 1px solid var(--color-pink);
+  border-inline-start: none;
+  border-block-end: none;
 }
 
 .header__rec {
@@ -41,7 +49,7 @@
   top: clamp(14px, 3.804vw, 24px);
   right: clamp(19px, 5.163vw, 29px);
   font-size: 15px;
-  color: var(--color-pink);
+  color: var(--color-accent);
 }
 
 .header__rec::after {
@@ -49,8 +57,8 @@
   display: inline-block;
   width: 9px;
   height: 9px;
-  background-color: var(--color-pink);
-  box-shadow: 0px 0px 4px 2px var(--color-pink);
+  background-color: var(--color-accent);
+  box-shadow: 0px 0px 4px 2px var(--color-accent);
   border-radius: 50%;
   margin-inline-start: 10px;
 }
@@ -73,7 +81,7 @@
   font-family: var(--font);
   font-weight: var(--font-regular);
   font-size: var(--font-xs);
-  color: var(--color-pink);
+  color: var(--color-accent);
   background: transparent;
   border: 1px solid transparent;
 }
@@ -88,36 +96,38 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--color-pink);
+  border-block-end: 1px solid var(--color-accent);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--color-pink);
+  pointer-events: none;
+  border: 1px solid var(--color-accent);
 }
 
 .title {
   font-weight: var(--font-bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
-  color: var(--color-purple);
-  text-shadow: 4px 4px 0px var(--color-pink);
+  color: var(--color-title);
 }
 
 .header__title {
+  text-shadow: 4px 4px 0px var(--color-accent);
   max-width: 355px;
   margin-block-end: 13.6vw;
 }
 
 .header__text {
   justify-self: end;
+  word-spacing: .3rem;
   max-width: clamp(355px, 94.667vw, 364px);
 }
 
 .text-decor {
   font-weight: var(--font-bold);
   line-height: 23.4px;
-  color: var(--color-dark-text);
-  background-color: var(--color-pink);
+  color: var(--color-decor-text);
+  background-color: var(--color-accent);
 }
 
 /* header media */
@@ -186,17 +196,18 @@
 .main-title {
   line-height: 23px;
   word-spacing: 8px;
-  color: var(--color-pink);
+  color: var(--color-accent);
   margin-block-end: 19px;
 }
 
 .main-subtitle {
+  word-spacing: .4rem;
   margin-block-end: 10px;
 }
 
 .main-text {
   line-height: 1.5rem;
-  color: var(--color-light-pink);
+  color: var(--color-text);
   margin-block-end: 20px;
   letter-spacing: .02rem;
   word-spacing: .4rem;
@@ -204,7 +215,7 @@
 
 .main-link {
   position: relative;
-  text-shadow: 2px 2px 0px var(--color-pink);
+  text-shadow: 2px 2px 0px var(--color-accent);
   text-decoration: none;
   border: 1px solid transparent;
   transition: border-color .3s;
@@ -243,15 +254,12 @@
   font-weight: var(--font-regular);
   line-height: 23.4px;
   margin-block-end: 10px;
+  word-spacing: .8rem;
 }
 
 .focus-images__block {
   display: grid;
   gap: 10px;
-}
-
-.focus-tips__subtitle {
-  margin: 0;
 }
 
 .main-image {
@@ -355,6 +363,7 @@
 
 .footer-title {
   letter-spacing: .7rem;
+  text-shadow: 2px 2px 0px var(--color-accent);
 }
 
 @media (width >=1000px) {

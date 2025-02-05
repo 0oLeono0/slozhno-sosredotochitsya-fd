@@ -8,10 +8,11 @@
   --font-bold: 700;
   --font-xs: 18px;
   
-  --color-pink: rgb(255, 0, 112);
-  --color-purple: rgb(219, 0, 255);
-  --color-dark-text: rgb(0, 0, 40);
-  --color-light-pink: rgb(241, 178, 206);
+  --color-accent: rgb(255, 0, 112);
+  --color-title: rgb(219, 0, 255);
+  --color-decor-text: rgb(0, 0, 40);
+  --color-text: rgb(241, 178, 206);
+  --color-bg: rgb(0, 0, 40);
 
   --offset: clamp(10px, 2.717vw, 20px);
 
