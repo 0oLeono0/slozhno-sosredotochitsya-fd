@@ -22,7 +22,7 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-angle);
 }
 
 .decorated-zone::after {
@@ -77,13 +77,13 @@
   font-family: var(--font);
   font-weight: var(--font-regular);
   font-size: var(--font-xs);
-  color: var(--color-accent);
+  color: var(--color-menu);
   background: transparent;
   border: none;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, .4);
+  outline: 1px solid var(--color-menu-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -91,12 +91,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  box-shadow: 0px 1px 0px 0px var(--color-accent);
+  box-shadow: 0px 1px 0px 0px var(--color-menu);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--color-accent);
+  outline: 1px solid var(--color-menu);
 }
 
 .title {
@@ -187,20 +187,21 @@
   padding-inline: clamp(10px, 2.667vw, 20px);
 }
 
-.main-title,
-.main-subtitle {
+.section-title {
   font-size: var(--font-xs);
   font-weight: var(--font-bold);
+  line-height: 23.4px;
+  margin-block-end: 10px;
 }
 
 .main-title {
   line-height: 23px;
-  color: var(--color-accent);
-  margin-block-end: 21px;
+  color: var(--color-main-title);
+  margin-block-end: 20px;
 }
 
-.main-subtitle {
-  margin-block-end: 10px;
+.main-intro {
+  font-weight: var(--font-regular);
 }
 
 .main-text {
@@ -242,13 +243,6 @@
 
 .focus-tips__subtitle {
   margin-block-end: 20px;
-}
-
-.main-intro {
-  font-size: var(--font-xs);
-  font-weight: var(--font-regular);
-  line-height: 23.4px;
-  margin-block-end: 10px;
 }
 
 .focus-images__list {
@@ -387,35 +381,4 @@
 
 .footer-title {
   text-shadow: 2px 2px 0px var(--color-accent);
-}
-
-html.theme-light {
-  .header__rec {
-    display: none;
-  }
-
-  .decorated-zone::after,
-  .decorated-zone::before{
-    border-color: var(--color-text);
-  }
-
-  .header__theme-menu-button {
-    color: var(--color-text);
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgba(50, 49, 45, 0.4);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    box-shadow: 0px 1px 0px 0px var(--color-text);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--color-text);
-  }
-
-  .main-title {
-    color: var(--color-text);
-  }
 }

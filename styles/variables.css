@@ -12,7 +12,11 @@
   --color-title: rgb(219, 0, 255);
   --color-decor-text: rgb(0, 0, 40);
   --color-text: rgb(241, 178, 206);
+  --color-main-title: rgb(255, 0, 112);
   --color-bg: rgb(0, 0, 40);
+  --color-angle: rgb(255, 0, 112);
+  --color-menu: rgb(255, 0, 112);
+  --color-menu-hover: rgba(255, 0, 112, .4);
 
   --offset: clamp(10px, 2.717vw, 20px);
 
